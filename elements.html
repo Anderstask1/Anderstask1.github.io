@@ -40,319 +40,93 @@
 					<article id="main">
 						<header>
 							<h2>Projects</h2>
-							<p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+							<p>Description of projects developed in relation to my Ph.D. with prediction examples and pipeline figures.</p>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 
 								<section>
-									<h4>Text</h4>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
 									<header>
-										<h4>Heading with a Subtitle</h4>
-										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+										<h4 style="text-transform: inherit;">AutoMAPSE 2D</h4>
+										<p>Global LV function estimation by 2D TEE for critically ill patients</p>
 									</header>
-									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+									<blockquote>
+										<p><b>Objective:</b> Evaluation of left ventricular (LV) function in critical care patients is useful to guide therapy and for the early detection of LV dysfunction, but the tools currently available are too time-consuming. To resolve this issue, we previously proposed a method for the continuous and automatic quantification of global LV function in critical care patients, based on the detection and tracking of anatomical landmarks in transesophageal heart ultrasound. In the present study, our aim was to improve the performance of mitral annulus detection in transesophageal echocardiography (TEE). </p>
+										<p><b>Methods:</b> We investigated several state-of-the-art networks for both the detection and tracking of the mitral annulus in TEE. We integrated the networks into a pipeline for automatic assessment of LV function through estimation of the mitral annular plane systolic excursion (MAPSE), named autoMAPSE. TEE recordings from a total of 245 patients were collected from St. Olavs University Hospital and used to train and test the respective networks. We evaluated the agreement between autoMAPSE estimates and manual references annotated by expert echocardiographers in 30 Echolab patients and 50 critical care patients. Furthermore, we proposed a prototype of autoMAPSE for clinical integration and tested it in critical care patients in the intensive care unit.</p>
+										<p><b>Results:</b> Compared to manual references, we achieved a mean difference of 0.8 (95% limits of agreement: -2.9 to 4.7) mm in Echolab patients, with a feasibility of 85.7%. In critical care patients, we reached a mean difference of 0.6 (95% limits of agreement: -2.3 to 3.5) mm and a feasibility of 88.1%. The clinical prototype of autoMAPSE achieved real-time performance.</p>
+										<p><b>Conclusion:</b> Automatic quantification of the LV function shows high feasibility in clinical settings. The agreement with manual references was comparable to interobserver variability of clinical experts.</p>
+									</blockquote>
+									<a href="https://doi.org/10.1016/j.artmed.2023.102646"><p><cite>Tasken et al.,  <i>Automatic Detection and Tracking of Anatomical Landmarks in Transesophageal Echocardiography for Quantification of Left Ventricular Function</i>, Accepted for Ultrasound in Medicine and Biology, 2024</cite></p></a>
+
+									<video width="100%" controls>
+										<source src="images/autoMAPSE_2D.mp4" type="video/mp4">
+										Your browser does not support HTML video.
+									</video>
+									<img src="images/autoMAPSE_2D.png" alt="Trulli" width="100%">
+
+									<br /><br /><br /><br />
 									<header>
-										<h5>Heading with a Subtitle</h5>
-										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+										<h4 style="text-transform: inherit;">AutoMAPSE 3D</h4>
+										<p>Fully auomatic estimation of global LV function by 3D TEE for critically ill patients</p>
 									</header>
-									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h5>Blockquote</h5>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h5>Preformatted</h5>
-									<pre><code>i = 0;
+									<blockquote cite="https://doi.org/10.1016/j.artmed.2023.102646">
+										Perioperative monitoring of cardiac function is beneficial for early detection of cardiovascular complications. The standard of care for cardiac monitoring performed by trained cardiologists and anesthesiologists involves a manual and qualitative evaluation of ultrasound imaging, which is a time-demanding and resource-intensive process with intraobserver- and interobserver variability. In practice, such measures can only be performed a limited number of times during the intervention. To overcome these difficulties, this study presents a robust method for automatic and quantitative monitoring of cardiac function based on 3D transesophageal echocardiography (TEE) B-mode ultrasound recordings of the left ventricle (LV). Such an assessment obtains consistent measurements and can produce a near real-time evaluation of ultrasound imagery. Hence, the presented method is time-saving and results in increased accessibility. The mitral annular plane systolic excursion (MAPSE), characterizing global LV function, is estimated by landmark detection and cardiac view classification of two-dimensional images extracted along the long-axis of the ultrasound volume. MAPSE estimation directly from 3D TEE recordings is beneficial since it removes the need for manual acquisition of cardiac views, hence decreasing the need for interference by physicians. Two convolutional neural networks (CNNs) were trained and tested on acquired ultrasound data of 107 patients, and MAPSE estimates were compared to clinically obtained references in a blinded study including 31 patients. The proposed method for automatic MAPSE estimation had low bias and low variability in comparison to clinical reference measures. The method accomplished a mean difference for MAPSE estimates of (-0.16 <span>&#177;</span> 1.06) mm. Thus, the results did not show significant systematic errors. The obtained bias and variance of the method were comparable to inter-observer variability of clinically obtained MAPSE measures on 2D TTE echocardiography. The novel pipeline proposed in this study has the potential to enhance cardiac monitoring in perioperative- and intensive care settings.
+									</blockquote>
+									<p><cite>Tasken et al.,  <i>Automated estimation of mitral annular plane systolic excursion by artificial intelligence from 3D ultrasound recordings</i>, Artificial Intelligence in Medicine, Volume 144, October 2023</cite></p>
+									<br /><br />
 
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
+									The autoMAPSE 3D pipeline consist of 4 steps. 
+									<img src="images/fig5_single_column.jpg" alt="Trulli" width="50%">
+									<br /><br />
+									<ol>
+										<li>The first step is to align the left ventricle along the long axis. The long axis is the axis of the left ventricle from the apex to the center of the basal plane. We align the volume in order to minimize foreshortening, reduce geometric distortion and avoid out of plane movement.
+											We propose a 3D CNN to predict the angle of the long axis. We slice the volume about the x- and y-axis into 60 images, and the CNN predicts the image with the longest ventricle. The problem is resolved as a regression problem by predicting a Gaussian curve, where the peak of the curve corresponds to the image with the longest ventricle.​</li>
+											<br /><br />
+											<video width="50%" controls>
+												<source src="images/Volume_aignment_slicing_animation.mp4" type="video/mp4">
+												Your browser does not support HTML video.
+											</video>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+											<video width="50%" controls>
+												<source src="images/Volume_alignment_animation.mp4" type="video/mp4">
+												Your browser does not support HTML video.
+											</video>
+											<br /><br />
+										<li>The second step is to classify the standard cardiac views of the ventricle. By slicing the volume about the long axis, we detect the 2C-, 4C- and LAX views. Hence, we obtain a complete orientation of the volume. A 3D CNN was designed to predict the slice closest to the cardiac view. Similar to the alignment of the ventricle, we solved this problem through regression.</li>
+										<br /><br />				
+										<video width="50%" controls>
+											<source src="images/View_classification_animation.mp4" type="video/mp4">
+											Your browser does not support HTML video.
+										</video>
+										<br /><br />
+										<li>The third step is to segment the mitral ring in 3D. The ventricle is sliced about the long axis into 2D images, and the mitral ring is detected in each image by a landmark detection network. The detected landmarks are transformed to 3D space, and a discrete 3D segmentation of the mitral ring is obtained for all volumes in the cardiac cycle. ​​</li>
+										<br /><br />	
+										<video width="50%" controls>
+											<source src="images/autoMAPSE_3D_animation.mp4" type="video/mp4">
+											Your browser does not support HTML video.
+										</video>
+										<br /><br />
+										<li>The fourth and last step involves the final estimation of the MAPSE measure. We compute the excursion of the mitral ring along the long axis through the cardiac cycle. A set of filtering operations are performed to increase the stability and robustness of the method.​</li>
+										<br /><br />
+										<img src="images/fig8_single_column.jpg" alt="Trulli" width="50%">
 
-								<section>
-									<h4>Lists</h4>
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<h5>Unordered</h5>
-											<ul>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Sagittis adipiscing.</li>
-												<li>Felis enim feugiat.</li>
-											</ul>
-											<h5>Alternate</h5>
-											<ul class="alt">
-												<li>Dolor pulvinar etiam.</li>
-												<li>Sagittis adipiscing.</li>
-												<li>Felis enim feugiat.</li>
-											</ul>
-										</div>
-										<div class="col-6 col-12-medium">
-											<h5>Ordered</h5>
-											<ol>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Etiam vel felis viverra.</li>
-												<li>Felis enim feugiat.</li>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Etiam vel felis lorem.</li>
-												<li>Felis enim et feugiat.</li>
-											</ol>
-											<h5>Icons</h5>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-											</ul>
-										</div>
-									</div>
-									<h5>Actions</h5>
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<ul class="actions">
-												<li><a href="#" class="button primary">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-											<ul class="actions small">
-												<li><a href="#" class="button primary small">Small</a></li>
-												<li><a href="#" class="button small">Small</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary small">Small</a></li>
-												<li><a href="#" class="button small">Small</a></li>
-											</ul>
-										</div>
-										<div class="col-6 col-12-medium">
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary fit">Default</a></li>
-												<li><a href="#" class="button fit">Default</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary small fit">Small</a></li>
-												<li><a href="#" class="button small fit">Small</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
+									  </ol>
 
-								<section>
-									<h4>Table</h4>
-									<h5>Default</h5>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h5>Alternate</h5>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h4>Buttons</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button large">Large</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions fit">
-										<li><a href="#" class="button fit">Fit</a></li>
-										<li><a href="#" class="button primary fit">Fit</a></li>
-										<li><a href="#" class="button fit">Fit</a></li>
-									</ul>
-									<ul class="actions fit small">
-										<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-										<li><a href="#" class="button fit small">Fit + Small</a></li>
-										<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h4>Form</h4>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<select name="demo-category" id="demo-category">
-													<option value="">- Category -</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-normal" name="demo-priority">
-												<label for="demo-priority-normal">Normal</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="col-12">
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" class="primary" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
-
-								<section>
-									<h4>Image</h4>
-									<h5>Fit</h5>
-									<div class="box alt">
-										<div class="row gtr-50 gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/banner.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-										</div>
-									</div>
-									<h5>Left &amp; Right</h5>
-									<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien. Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-									<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius. Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat. Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui.</p>
-								</section>
-
-							</div>
-						</section>
+									<br /><br /><br /><br />
+									<header>
+										<h4 style="text-transform: inherit;">AutoStrain and synTEE</h4>
+										<p>Regional LV function estimation by 2D TEE for critically ill patients</p>
+									</header>
+									<blockquote>
+										Segmental longitudinal strain (SLS) of the left ventricle is an important prognostic indicator in critically ill patients undergoing cardiac surgery and intensive care for the detection of myocardial infarctions. Unfortunately, manual strain measurements are too resource-intensive for the monitoring of critically ill patients. In the present study, we proposed a method for automatic estimation of regional LV function by predicting segmental SLS in critically ill patients by transesophageal echocardiography (TEE). We proposed a RAFT-based neural network for optical flow estimation named EchoFlow, to estimate myocardial motion in TEE. We adopted the SIMUS simulation pipeline to generate synthetic TEE data with ground-truth references of the myocardial motion through the cardiac cycle to train EchoFlow. We trained our EchoFlow network on a subset of the synthetic data and tested EchoFlow on the remaining synthetic data. We evaluated the EchoFlow performance by providing a myocardial mesh for the first frame, warping the mesh based on the estimated dense displacement field and comparing the mesh position with ground truth references for all frames of the recording. We integrated the network into a pipeline for SLS computation. We generated realistic synthetic TEE B-mode ultrasound images of 80 patients. EchoFlow achieved an end-point-error between estimated and reference flow fields of 0.03 mm, and a mean distance of 2.3 mm between the estimated and reference myocardial meshes. Our autoStrain pipeline automatically estimated SLS on the test data. Evaluating against ground truth measures, we achieved a mean distance (95% limits of agreement) of -2.2 (-11.0 to 6.5)%. Our EchoFlow network showed promising results for precise motion estimation in TEE. Our autoStrain pipeline demonstrated EchoFlow's ability to estimate the SLS of the left ventricle in TEE.
+									</blockquote>
+									<p><cite>Tasken et al.,  <i>Automatic Estimation of Segmental Longitudinal Strain by Artificial Intelligence in Transesophageal Echocardiography</i>, The Seventh Annual MMIV Conference, Desember 2023</cite></p>
+									
+									
+									<video width="100%" controls>
+										<source src="images/autoStrain.mp4" type="video/mp4">
+										Your browser does not support HTML video.
+									  </video>
 					</article>
 
 				<!-- Footer -->
