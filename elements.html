@@ -76,39 +76,40 @@
 									<br /><br />
 
 									The autoMAPSE 3D pipeline consist of 4 steps. 
-									<img src="images/fig5_single_column.jpg" alt="Trulli" width="50%">
+									<br /><br />
+									<img src="images/fig5_single_column.jpg" alt="Trulli" width="100%">
 									<br /><br />
 									<ol>
 										<li>The first step is to align the left ventricle along the long axis. The long axis is the axis of the left ventricle from the apex to the center of the basal plane. We align the volume in order to minimize foreshortening, reduce geometric distortion and avoid out of plane movement.
 											We propose a 3D CNN to predict the angle of the long axis. We slice the volume about the x- and y-axis into 60 images, and the CNN predicts the image with the longest ventricle. The problem is resolved as a regression problem by predicting a Gaussian curve, where the peak of the curve corresponds to the image with the longest ventricle.​</li>
 											<br /><br />
-											<video width="50%" controls>
+											<video width="100%" controls>
 												<source src="images/Volume_aignment_slicing_animation.mp4" type="video/mp4">
 												Your browser does not support HTML video.
 											</video>
 
-											<video width="50%" controls>
+											<video width="100%" controls>
 												<source src="images/Volume_alignment_animation.mp4" type="video/mp4">
 												Your browser does not support HTML video.
 											</video>
 											<br /><br />
 										<li>The second step is to classify the standard cardiac views of the ventricle. By slicing the volume about the long axis, we detect the 2C-, 4C- and LAX views. Hence, we obtain a complete orientation of the volume. A 3D CNN was designed to predict the slice closest to the cardiac view. Similar to the alignment of the ventricle, we solved this problem through regression.</li>
 										<br /><br />				
-										<video width="50%" controls>
+										<video width="100%" controls>
 											<source src="images/View_classification_animation.mp4" type="video/mp4">
 											Your browser does not support HTML video.
 										</video>
 										<br /><br />
 										<li>The third step is to segment the mitral ring in 3D. The ventricle is sliced about the long axis into 2D images, and the mitral ring is detected in each image by a landmark detection network. The detected landmarks are transformed to 3D space, and a discrete 3D segmentation of the mitral ring is obtained for all volumes in the cardiac cycle. ​​</li>
 										<br /><br />	
-										<video width="50%" controls>
+										<video width="100%" controls>
 											<source src="images/autoMAPSE_3D_animation.mp4" type="video/mp4">
 											Your browser does not support HTML video.
 										</video>
 										<br /><br />
 										<li>The fourth and last step involves the final estimation of the MAPSE measure. We compute the excursion of the mitral ring along the long axis through the cardiac cycle. A set of filtering operations are performed to increase the stability and robustness of the method.​</li>
 										<br /><br />
-										<img src="images/fig8_single_column.jpg" alt="Trulli" width="50%">
+										<img src="images/fig8_single_column.jpg" alt="Trulli" width="100%">
 
 									  </ol>
 
